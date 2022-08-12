@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>Regex101_Clone</title>
+</head>
+<body bgcolor="White">
+    <h1 align="center"><u>Regex101 Clone</u></h1>
+    
+    <form action="" method="post">
+        <tr>
+            <td><h3>REGULAR EXPRESSION</h3></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="xpn" value="{{xpn}}" style="font-size: 13pt; height: 30px ; width: 700px;" placeholder="insert your regular expression here"></td>
+        </tr>
+        <tr>
+            <td><h3>TEST STRING</h3></td>
+        </tr>
+        <tr>
+            <td bgcolor="Green"><input type="text" name="tst" value="{{tst}}" style="font-size: 13pt; height: 130px ; width: 700px;" placeholder="                                           insert your test string here">
+        <br><br>
+                {% if count > 0 %}
+                <h3 style="display:inline ;">Result:</h3>&nbsp;&nbsp;&nbsp;{{result}} <br><br>
+                <h3 style="display:inline ;">Total matched string:</h3>&nbsp;&nbsp;&nbsp;{{count}} <br><br>
+                <!--{% for matches in match %}
+                <h3>String Matched:</h3>{{matches}}<br>
+                {% endfor %}-->
+                <h3 style="display:inline ;">Positions:</h3> <br>
+                {% for lst in lsts %}
+                {{lst}}<br>
+                {% endfor %}
+                {% elif count==-1 %}
+                {{result}} <br><br>
+                {% else %}
+                <h3 style="display:inline ;">Result:</h3>&nbsp;&nbsp;&nbsp; No Matches found <br><br>
+                <h3 style="display:inline ;">Total matched string:</h3>&nbsp;&nbsp;&nbsp;{{count}} <br>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="SUBMIT" style="height: 50px; width:100px;"></td>
+        </tr>
+    </form>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
